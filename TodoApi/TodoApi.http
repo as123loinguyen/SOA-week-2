@@ -1,0 +1,43 @@
+@TodoApi_HostAddress = https://localhost:7070
+
+### POST request to create a new Todo item
+POST {{TodoApi_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name": "walk dog",
+  "isComplete": true
+}
+
+###
+
+### GET request to retrieve all Todo items
+GET {{TodoApi_HostAddress}}/todoitems
+
+###
+
+### GET request to retrieve a single Todo item by ID
+GET {{TodoApi_HostAddress}}/todoitems/1
+
+###
+
+### GET request to retrieve all completed Todo items
+GET {{TodoApi_HostAddress}}/todoitems/complete
+
+###
+
+### PUT request to update a Todo item by ID
+PUT {{TodoApi_HostAddress}}/todoitems/1
+Content-Type: application/json
+
+{
+  "name": "feed fish",
+  "isComplete": false
+}
+
+###
+
+### DELETE request to delete a Todo item by ID
+DELETE {{TodoApi_HostAddress}}/todoitems/1
+
+###
